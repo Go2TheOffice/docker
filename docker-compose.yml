@@ -41,7 +41,7 @@ services:
         image: guacamole/guacamole
         links:
             - guacd
-            # -postgres #I feel like this is needed
+            - postgres #I feel like this is needed
         networks:
             guacamole-network:
         ports:
