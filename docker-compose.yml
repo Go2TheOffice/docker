@@ -2,7 +2,7 @@ version: '3.6'
 
 networks:
     guacamole-network:
-        driver: bridged 
+        driver: bridge 
 
 services:
     guacd: 
