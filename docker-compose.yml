@@ -43,7 +43,7 @@ services:
             - guacd
             # -postgres #I feel like this is needed
         networks:
-            guacamole-network
+            guacamole-network:
         ports:
            - 8080:8080/tcp
         restart: always
