@@ -34,7 +34,7 @@ services:
             - postgres
         environment: 
             GUACD_HOSTNAME: guacd
-            GUAC_LOG_LEVEL: debug
+            # GUAC_LOG_LEVEL: debug # this is helpful for troubleshooting
             POSTGRES_DATABASE: guac_db
             POSTGRES_HOSTNAME: postgres
             POSTGRES_PASSWORD: letmein123
