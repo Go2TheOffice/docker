@@ -10,10 +10,7 @@ services:
         networks:
             guacamole-network:
         restart: always
-        # volumes:
-        #     - ./drive:/drive:rw # Not really sure what this is for 
-        #     - ./record:/record:rw # Not really sure what this is for
-
+        
     postgres:
         environment: 
             PGDATA: /var/lib/posgtgresql/data/guacamole
@@ -33,8 +30,8 @@ services:
             - guacd
             - postgres
         environment: 
-            GUACD_HOSTNAME: guacd
             # GUAC_LOG_LEVEL: debug # this is helpful for troubleshooting
+            GUACD_HOSTNAME: guacd
             POSTGRES_DATABASE: guac_db
             POSTGRES_HOSTNAME: postgres
             POSTGRES_PASSWORD: letmein123
@@ -42,7 +39,7 @@ services:
         image: guacamole/guacamole
         links:
             - guacd
-            - postgres #I feel like this is needed
+            - postgres
         networks:
             guacamole-network:
         ports:
