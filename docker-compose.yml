@@ -10,9 +10,9 @@ services:
         networks:
             guacamole-network:
         restart: always
-        volumes:
-            - ./drive:/drive:rw # Not really sure what this is for 
-            - ./record:/record:rw # Not really sure what this is for
+        # volumes:
+        #     - ./drive:/drive:rw # Not really sure what this is for 
+        #     - ./record:/record:rw # Not really sure what this is for
 
     postgres:
         environment: 
